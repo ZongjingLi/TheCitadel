@@ -47,8 +47,8 @@ function createPostHTML(postContent) {
     let now = new Date()
     let time = now.toLocaleTimeString()
     let date = now.toLocaleString()
-    let name = "Marty McFly"
-    let username = "15958003841"
+    let name = "The LichKing"
+    let username = "ysun697@gatech.edu"
     
     currentPostId = currentPostId + 1
     
@@ -60,10 +60,10 @@ function createPostHTML(postContent) {
         <article id="article-container-${currentPostId}">
             <header>
                 <button class="close" onclick="deletePost(${currentPostId})">
-                    <img src="tweeter/images/close.png" height="15" width="15"/>
+                    <img src="src/close.png" height="15" width="15"/>
                 </button>
                 <div class="avatar">
-                <img src="avatar.png" height="40" width="40"/>
+                <img src = "src/lck.png" height="40" width="40"/>
                 </div>
                 <h1>${name}</h1>
                 <h2>@${username}</h2>
@@ -76,9 +76,7 @@ function createPostHTML(postContent) {
                 <p class="date-posted">Posted
                     <time>${date}</time>
                 </p>
-                <button class="heart" onclick="lovePost(${currentPostId})">
-                    <img src="tweeter/images/heart.svg" id="heart-image-${currentPostId}" height="15" width="16"/>
-                </button>
+
             </footer>
         </article>`
     document.getElementById("form-container").insertAdjacentHTML("afterend", template)
