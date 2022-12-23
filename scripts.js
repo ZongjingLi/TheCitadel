@@ -84,6 +84,24 @@ function createPostHTML(postContent) {
 
 function test_string_from_python(){
     
-    let template = eel.test_str()()
-    document.getElementById("test-name").innerText = template
+    let res1 = eel.test_str()()
+    /*document.getElementById("test-name").innerText = template*/
+    res1.then(a=>{
+
+		let test_element = document.getElementById("test-name")
+		test_element.innerText = a
+	
+	})
+}
+
+function test_network_from_torch(){
+    let textArea = document.getElementById("input-textarea")
+
+    let res1 = eel.test_network(textArea.value)();
+    textArea.value = "";
+
+    res1.then(a=>{
+        let test_element = document.getElementById("test-name")
+		test_element.innerText = a
+	})
 }

@@ -25,8 +25,12 @@ def test_str():
     x = torch.randn([1,2])
     x = net(x)
     res = str(x.detach().numpy()[0][0])
-    print("ACTUAL ANSWER: " + str(res))
     return "ACTUAL ANSWER: " + str(res)
+
+@eel.expose
+def test_network(input_sent):
+    print(input_sent)
+    return "this is the output"
 
 @eel.expose
 def run_model():
