@@ -1,12 +1,92 @@
 <head>
     <style>
-        body{
-            background-color: #f7f7f7;
-            color: #4a4a4a;
-            font-family:open-sans,sans-serif;
-            font-size: 16px;
-            line-height: 1.2;
+		body {
+			background-color: #f7f7f7;
+			color: #4a4a4a;
+			font-family: 'open-sans', sans-serif;
+			font-size: 16px;
+			line-height: 1.2;
+		}
+		/* Center the main box */
+		main {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 800px;
+			padding: 20px;
+		}
+		/* Adding border styling, padding, and shadows to articles */
+		article {
+			background-color: #ffffff;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			padding: 20px;
+			border-color: #eaeaea;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+			position: relative;
+		}
+
+		.avatar {
+			background-color: #ffffff;
+			/*** Style the border surrounding the avatar image ***/
+			border-width: 1px;
+			border-style: solid;
+			border-color: #81C4E9;
+			border-radius: 50%;
+			float: left;
+			height: 50px;
+			margin-right: 10px;
+			min-width: 50px;
+			position: relative;
+		}
+
+		.avatar img {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+        a{
+            color:#2D9CDB;
+            font-family:'open-sans',sans-serif;
+            font-weight:700;
         }
+
+        a:hover{
+            color:#1789C9;
+        }
+
+        blockquote{
+            margin-left:0;
+            margin-right:0;
+            margin-top:20px;
+        }
+
+        button{
+            border:none;
+            cursor:pointer;
+            padding-left:0;
+            padding-right:0;
+            transform:scale(1);
+        }
+
+        button:hover{
+            transform:scale(1.2);
+        }
+
+        button:focus{
+            outline: none;
+        }
+
+        button.close{
+            opacity: 0.5;
+            position:absolute;
+            right: 20px;
+            top: 20px;
+        }
+
         .date-posted{
             color: #a9a9a9;
             margin-bottom: 0;
@@ -17,20 +97,69 @@
         .date-posted time{
             color: #5caecf;
         }
+
+        footer{
+            margin-top:20px;
+            height:15px;
+        }
+
+        footer p{
+            color: #a9a9a9;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        h1{
+            font-family: "open-sans",sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 8px;
+        }
+
+        h2{
+            color: #a9a9a9;
+            font-family:'open-sans',sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-top:0;
+            margin-bottom:0;
+        }
+
+        hr{
+            border-width: 1px;
+            border-style: solid;
+            border-color: #eaeaea;
+        }
+
     </style>
 </head>
 
 <body>
-    <article>
-        <blockquote>
-            Welcome to the Citadel of Ice. You can check further details by giveing orders or 
-            just go to <a href="https://www.google.com/search?q=isosceles+triangle&oq=isosceles+triangle&aqs=chrome..69i57.136j0j7&sourceid=chrome&ie=UTF-8"> Ice Crown</a>
-        </blockquote>
-        </hr>
-        <footer>
-            <p class="date-posted"> Posted
-                <time>12/23/2022 11:52:50 AM</time>
-            </p>
-        </footer>
-    </article>
+    <main>
+        <article>
+            <header>
+                <button class="close">
+                    <img src="tweeter/images/close.png" height="15" width="15"/>
+                </button>
+                <div class="avatar">
+                    <img src="src/meleko.jpeg" height="40" width="40" />
+                </div>
+                <h1> Melkor Bauglir</h1>
+                <h2> ysun697@gatech.edu</h2>
+            </header>
+            <blockquote>
+                Welcome to the Citadel of Ice. You can check further details by giveing orders or 
+                just go to <a href="https://www.google.com/search?q=isosceles+triangle&oq=isosceles+triangle&aqs=chrome..69i57.136j0j7&sourceid=chrome&ie=UTF-8"> Ice Crown</a>
+            </blockquote>
+            </hr>
+            <footer>
+                <p class="date-posted"> Posted
+                    <time>12/23/2022 11:52:50 AM</time>
+                </p>
+            </footer>
+        </article>
+    </main>
 </body>
