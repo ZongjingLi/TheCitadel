@@ -7,6 +7,4 @@ Created on Mon Mar 14 10:03:22 2022
 import eel
 from js_interface import *
 
-
-eel.init('D:\\MecThuen')
-eel.start('core.html') 
+eel.start('index.html') 
