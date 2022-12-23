@@ -81,3 +81,9 @@ function createPostHTML(postContent) {
         </article>`
     document.getElementById("form-container").insertAdjacentHTML("afterend", template)
 }
+
+function test_string_from_python(){
+    
+    let template = eel.test_str()()
+    document.getElementById("test-name").innerText = template
+}
