@@ -92,7 +92,7 @@ function createRespondHTML(postContent) {
     let now = new Date()
     let time = now.toLocaleTimeString()
     let date = now.toLocaleString()
-    let name = "The LickKing"
+    let name = "The LichKing"
     let username = "zongjingli@gmail.com"
     
     currentPostId = currentPostId + 1

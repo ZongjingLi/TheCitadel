@@ -15,6 +15,6 @@ music = pygame.mixer.music.load(file)
 print("Start the Citadel...")
 
 eel.init('/Users/melkor/Documents/GitHub/TheCitadel')
-pygame.mixer.music.play(loops=True)
+pygame.mixer.music.play(loops=3)
 eel.start('index.html')
 
