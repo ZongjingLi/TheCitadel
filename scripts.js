@@ -35,10 +35,16 @@ function submitPost() {
         return false;
     }
     
+    createPostHTML(contentToPost)
+    
+    let res1 = eel.get_respond(textArea.value)();
+
+    res1.then(a=>{
+        createRespondHTML(a)
+	})
+
     textArea.value = "";
     counter.innerText = 0;
-    
-    createPostHTML(contentToPost)
     return false;
 }
 
@@ -47,8 +53,47 @@ function createPostHTML(postContent) {
     let now = new Date()
     let time = now.toLocaleTimeString()
     let date = now.toLocaleString()
-    let name = "The LichKing"
+    let name = "Arthas"
     let username = "ysun697@gatech.edu"
+    
+    currentPostId = currentPostId + 1
+    
+    postContent = postContent.replace(/</g, "&lt;")
+    postContent = postContent.replace(/\n/g, "<br />")
+    postContent = postContent.replace(/(https?:\/\/[^\s]+)/g, "<a href=\"$1\" target=\"_blank\">$1</a>")
+    
+    let template = `
+        <article id="article-container-${currentPostId}">
+            <header>
+                <button class="close" onclick="deletePost(${currentPostId})">
+                    <img src="src/close.png" height="15" width="15"/>
+                </button>
+                <div class="avatar">
+                <img src = "src/arthas.png" height="40" width="40"/>
+                </div>
+                <h1>${name}</h1>
+                <h2>@${username}</h2>
+            </header>
+            <blockquote>
+                ${postContent}
+            </blockquote>
+            <hr/>
+            <footer>
+                <p class="date-posted">Posted
+                    <time>${date}</time>
+                </p>
+
+            </footer>
+        </article>`
+    document.getElementById("form-container").insertAdjacentHTML("afterend", template)
+}
+
+function createRespondHTML(postContent) {
+    let now = new Date()
+    let time = now.toLocaleTimeString()
+    let date = now.toLocaleString()
+    let name = "The LickKing"
+    let username = "zongjingli@gmail.com"
     
     currentPostId = currentPostId + 1
     
@@ -113,7 +158,7 @@ function test_network_from_torch2(){
     let res1 = eel.get_respond(textArea.value)();
 
     res1.then(a=>{
-        createPostHTML(a)
+        createRespondHTML(a)
         return false;
 	})
 }
