@@ -7,6 +7,14 @@ Created on Mon Mar 14 10:03:22 2022
 import eel
 from js_interface import *
 
+import pygame
+file = "src/KFT.mp3"
+pygame.mixer.init()
+music = pygame.mixer.music.load(file)
+
+print("Start the Citadel...")
 
 eel.init('/Users/melkor/Documents/GitHub/TheCitadel')
-eel.start('index.html') 
+pygame.mixer.music.play(loops=True)
+eel.start('index.html')
+
