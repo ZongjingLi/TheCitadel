@@ -110,7 +110,7 @@ function test_network_from_torch2(){
     let textArea = document.getElementById("input-textarea")
     let counter = document.getElementById("input-characters")
 
-    let res1 = eel.test_network(textArea.value)();
+    let res1 = eel.get_respond(textArea.value)();
 
     res1.then(a=>{
         createPostHTML(a)
