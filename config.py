@@ -1,11 +1,6 @@
 import torch
-import torch.nn as nn
-
-import argparse 
+import argparse
 
 parser = argparse.ArgumentParser()
-
-parser.add_argument("--name", default = "The Citadel")
-parser.add_argument("--concept_dim",default = 100)
-
+parser.add_argument("--name",default = "The Citadel")
 config = parser.parse_args(args = [])
