@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 class TheCitadel(nn.Module):
     def __init__(self,config):
         super().__init__()
+        self.concept_dim = config.concept_dim
+        self.language_encoder = None
 
     def forward(self,x):
         return "My son, the day you were born, the very forests of Lordaeron whispered the name Arthas.\
