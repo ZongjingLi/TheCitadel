@@ -1,3 +1,17 @@
+function previewFile() {
+    var preview = document.getElementById("namo");
+    var file  = document.querySelector('input[type=file]').files[0];
+    var reader = new FileReader();
+    reader.onloadend = function () {
+     preview.src = reader.result;
+    }
+    if (file) {
+     reader.readAsDataURL(file);
+    } else {
+     preview.src = "";
+    }
+}
+
 function deletePost(id){
     let elementId = "article-container-" + id
     let element = document.getElementById(elementId)
@@ -162,20 +176,16 @@ function test_network_from_torch2(){
         return false;
 	})
 }
-
-
-
-
-$(function() {
-    $('#img').change(function() {
-      var file = this.files[0]; //选择上传的文件
-      var r = new FileReader();
-      r.readAsDataURL(file); //Base64
-      $(r).load(function() {
-        // $('div').html('<img src="' + this.result + '" alt="" />');
-        $('label').css({
-          "background": "url" + "(" + this.result + ")"
-        })
-      });
-    });
-  });
+function previewFile() {
+    var preview = document.getElementById('preview-img');
+    var file  = document.querySelector('input[type=file]').files[0];
+    var reader = new FileReader();
+    reader.onloadend = function () {
+     preview.src = reader.result;
+    }
+    if (file) {
+     reader.readAsDataURL(file);
+    } else {
+     preview.src = "";
+    }
+}
