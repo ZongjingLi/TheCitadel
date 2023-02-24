@@ -217,3 +217,14 @@ fieldset div{
     margin-left:6px;
     margin-top:2px;
 }
+
+label {
+    width: 200px;
+    display: block;
+    background: url(2.png);
+    height: 200px;
+  }
+  
+  input {
+    visibility: hidden;
+  }

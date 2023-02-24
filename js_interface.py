@@ -26,4 +26,5 @@ def test_network(input_sent):
 @eel.expose 
 def get_respond(text):
     results = citadel_model(text)
+    print(results)
     return results

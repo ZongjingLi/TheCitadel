@@ -164,3 +164,18 @@ function test_network_from_torch2(){
 }
 
 
+
+
+$(function() {
+    $('#img').change(function() {
+      var file = this.files[0]; //选择上传的文件
+      var r = new FileReader();
+      r.readAsDataURL(file); //Base64
+      $(r).load(function() {
+        // $('div').html('<img src="' + this.result + '" alt="" />');
+        $('label').css({
+          "background": "url" + "(" + this.result + ")"
+        })
+      });
+    });
+  });
