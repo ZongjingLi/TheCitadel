@@ -10,7 +10,14 @@ import eel
 from config  import *
 from Citadel import *
 
+import json
+
 citadel_model = TheCitadel(config)
+if config.load_ckpt:citadel_model = torch.load(config.ckpt_path)
+else:print("failed to load the citadel")
+
+# load the reserved words for the citadel response
+reserved_keywords = json.load(config.reserved_path)
 
 @eel.expose
 def test_str():
@@ -25,6 +32,7 @@ def test_network(input_sent):
 
 @eel.expose 
 def get_respond(text):
-    results = citadel_model(text)
-    print(results)
+    if text in reserved_keywords:
+        return results
+    else:results = citadel_model(text)
     return results
