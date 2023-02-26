@@ -83,7 +83,7 @@ function createPostHTML(postContent) {
                     <img src="src/close.png" height="15" width="15"/>
                 </button>
                 <div class="avatar">
-                <img src = "src/arthas.png" height="40" width="40"/>
+                <img src = "src/lck.png" height="40" width="40"/>
                 </div>
                 <h1>${name}</h1>
                 <h2>@${username}</h2>
@@ -122,7 +122,7 @@ function createRespondHTML(postContent) {
                     <img src="src/close.png" height="15" width="15"/>
                 </button>
                 <div class="avatar">
-                <img src = "src/lck.png" height="40" width="40"/>
+                <img src = "src/arthas.png" height="40" width="40"/>
                 </div>
                 <h1>${name}</h1>
                 <h2>@${username}</h2>

@@ -17,7 +17,8 @@ if config.load_ckpt:citadel_model = torch.load(config.ckpt_path)
 else:print("failed to load the citadel")
 
 # load the reserved words for the citadel response
-reserved_keywords = json.load(config.reserved_path)
+with open(config.reserved_path) as file:
+    reserved_keywords = json.load(file)
 
 @eel.expose
 def test_str():
@@ -33,6 +34,5 @@ def test_network(input_sent):
 @eel.expose 
 def get_respond(text):
     if text in reserved_keywords:
-        return results
-    else:results = citadel_model(text)
-    return results
+        return reserved_keywords[text]
+    else:return citadel_model(text)
