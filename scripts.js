@@ -49,17 +49,21 @@ function submitPost() {
         return false;
     }
     
-    createPostHTML(contentToPost)
+    if (contentToPost == "view stats"){
+        createPostHTML(`To view the stats of the Citadel click this <a href="stats.html">stats</a> for further details.`)
+    } else {
+        createPostHTML(contentToPost)
     
-    let res1 = eel.get_respond(textArea.value)();
-
-    res1.then(a=>{
-        createRespondHTML(a)
-	})
-
+        let res1 = eel.get_respond(textArea.value)();
+    
+        res1.then(a=>{
+            createRespondHTML(a)
+        })
+    }
     textArea.value = "";
     counter.innerText = 0;
     return false;
+
 }
 
 let currentPostId = 1;
@@ -72,10 +76,11 @@ function createPostHTML(postContent) {
     
     currentPostId = currentPostId + 1
     
+    /**
     postContent = postContent.replace(/</g, "&lt;")
     postContent = postContent.replace(/\n/g, "<br />")
     postContent = postContent.replace(/(https?:\/\/[^\s]+)/g, "<a href=\"$1\" target=\"_blank\">$1</a>")
-    
+    **/
     let template = `
         <article id="article-container-${currentPostId}">
             <header>
