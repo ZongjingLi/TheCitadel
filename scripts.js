@@ -52,6 +52,10 @@ function submitPost() {
         createPostHTML(`To view the calender of the Citadel, clcik this <a href="fullcalendar.html">calender</a> for further details`);
     }
     
+    if (contentToPost == "view dashboard") {
+        createPostHTML(`To view the calender of the Citadel, clcik this <a href="dash.html">calender</a> for further details`);
+    }
+
     if (contentToPost == "view stats") {
         createPostHTML(`To view the stats of the Citadel click this <a href="stats.html">stats</a> for further details.`)
     } else {
