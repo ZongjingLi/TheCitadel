@@ -8,9 +8,10 @@ import torch.nn.functional as F
 import eel
 
 from config  import *
-from Citadel import *
+from citadel import *
 
 import json
+import time
 
 citadel_model = TheCitadel(config)
 if config.load_ckpt:citadel_model = torch.load(config.ckpt_path)
@@ -33,6 +34,7 @@ def test_network(input_sent):
 
 @eel.expose 
 def get_respond(text):
+    time.sleep(0.5)
     if text in reserved_keywords:
         return reserved_keywords[text]
     else:return citadel_model(text)
