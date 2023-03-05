@@ -1,14 +1,111 @@
 <head>
-    <link rel="stylehsheet" href="css/introstyle.css">
-    <script src="js/scripts.js"></script>
+    <link rel="stylehsheet" href="css/dashstyle.css">
+    <link rel="stylesheet" href="css/introstyle.css">
+    <script type="text/javascript" src="/eel.js"></script>
+
     <title>Dashboard</title>
 </head>
 
 <body>
-    <main>
-        Here is the main content of the canvas
+
+    <main id="container-wrapper">
+        <div class="center" >
+            <canvas id="Chart-1" style="
+            margin-left:auto;
+            margin-right:auto; 
+            border-radius:10px;
+            border-width:1px;
+            border-style:solid;
+            border-color:#44ade6;
+            height:250px;
+            max-width:300px;
+            max-height:250px;
+            background-color: #ffffff;"></canvas>   
+           
+           <canvas id="Chart-2" style="
+           margin-left:auto;
+           margin-right:auto;  
+           border-radius:10px;
+           border-width:1px;
+           border-style:solid;
+           border-color:#3299d1;
+           height:250px;
+           max-width:300px;
+           max-height:250px;
+           background-color: #ffffff;"></canvas>    
+
+        </div> 
+        <hr>
+
+    
+        <div>
         <article>
-            Here is an short article about the content mentioned above.
+            This is the first section of you inpun result.
         </article>
+        <canvas id="Chart-10" style="    
+        margin-right: auto;
+        border-radius:10px;
+        border-width:1px;
+        border-style:solid;
+        border-color:#81C4E9;
+        font-size:14px;
+        height:250px;
+        margin-bottom:2px;
+        padding:6px;
+        resize:none;
+        width:100%;
+        max-width:300px;
+        max-height:250px;
+        background-color: #ffffff;"></canvas>   
+        <hr>
+        </div>
+
+    <div>
+        <article>
+            This is the second section of the default scalar. You can add your own data here.
+        </article>
+        <canvas id="Chart-2" style="  
+        margin-right: auto;  
+        border-radius:10px;
+        border-width:1px;
+        border-style:solid;
+        border-color:#81C4E9;
+        font-size:14px;
+        height:250px;
+        margin-bottom:2px;
+        padding:6px;
+        resize:none;
+        width:100%;
+        max-width:300px;
+        max-height:250px;
+        background-color: #ffffff;"></canvas>    
+        <hr>
+    </div>         
+
+    <div>
+        <article>
+            This is the default donut chart. You can upload the data you want to update the result,
+        </article>
+        <canvas id="Chart-3" style="   
+        margin-right: auto; 
+        border-radius:10px;
+        border-width:1px;
+        border-style:solid;
+        border-color:#81C4E9;
+        font-size:14px;
+        height:350px;
+        margin-bottom:2px;
+        padding:6px;
+        resize:none;
+        width:100%;
+        max-width:300px;
+        max-height:250px;
+        background-color: #ffffff;">
+    </canvas>   
+    </div>
+
     </main>
+
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="js/scripts.js"></script>
