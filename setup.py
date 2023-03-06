@@ -9,6 +9,6 @@ setup(
     version='0.0',
     description='The Ice Crown Citadel',
     author='Zongjing Li',
-    packages=['icc,citadel'],
+    packages=['icc'],
     author_email='zongjingli997@gmail.com',
 )
