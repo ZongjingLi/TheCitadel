@@ -1,5 +1,5 @@
-from runyanar.programs import *
-from runyanar.types import *
+from ..programs import *
+from ..types import *
 
 
 def _addition(x): return lambda y: x + y

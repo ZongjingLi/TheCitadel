@@ -1,5 +1,4 @@
-#from runyanar.grammar import *
-from runyanar.programs import *
+from .programs import *
 epsilon = 0.001
 
 

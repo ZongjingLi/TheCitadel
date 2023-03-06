@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from runyanar.types import *
-from runyanar.utils import *
+from .types import *
+from .utils import *
 
 from time import time
 import math
