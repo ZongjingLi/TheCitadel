@@ -1,19 +1,33 @@
 import torch
 import torch.nn as nn
-
 import torch.nn.functional as F
 
-import numpy as np
-
 import matplotlib.pyplot as plt
+import numpy as np
+import time
+
+from .programRecognition import *
+from icc.reflection import *
 
 class TheCitadel(nn.Module):
     def __init__(self,config):
         super().__init__()
         self.concept_dim = config.concept_dim
         self.language_encoder = None
+        self.program_search = NeuroHeurisicSearch(config)
+
+    def search_timeout(secs = 2):
+        timeout = time.time() + secs 
+        while True:
+            if  time.time() > timeout:
+                break
 
     def forward(self,x):
+        timeout = time.time() + 2   # 5 minutes from now
+        while True:
+            if  time.time() > timeout:
+                break
+        
         return "My son, the day you were born, the very forests of Lordaeron whispered the name Arthas.\
                 My child, I watched with pride as you grew into a weapon of righteousness.\
                 Remember, our line has always ruled with wisdom and strength. And I know you will show restraint when exercising your great power.\
