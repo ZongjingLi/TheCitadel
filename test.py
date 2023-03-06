@@ -16,7 +16,4 @@ pf = ParticleFilter(40)
 
 import matplotlib.pyplot as plt
 
-ims = text2img(["Hello there!"],[480,360])
-
-plt.imshow(ims)
-plt.show()
+ims = read_image("citadel/web/src/arthas.jpg")
