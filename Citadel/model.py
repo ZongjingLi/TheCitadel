@@ -11,12 +11,22 @@ from icc.reflection import *
 import gc
 
 class TheCitadel(nn.Module):
+    
+    COUNT = 0
+
     def __init__(self,config):
         super().__init__()
         self.config = config
         self.concept_dim = config.concept_dim
         self.language_encoder = None
         self.program_search = NeuroHeurisicSearch(config)
+        
+        # Primitive Token Embeddings
+        self.primitive_embeddings = nn.Embedding(config.num_primitives,config.primitive_dim)
+
+    def updatePrimitives(self):
+        for program in Primitive.GLOBALS:
+            pass
 
     def solution_abstraction(self, programs = None):
         if programs == None:

@@ -21,6 +21,11 @@ ims = read_image("citadel/web/src/arthas.jpg")
 from icc.reflection.domains.arithmetics import *
 
 programs = [
+    ("(+. 1. 1.)",None),
+    ("(+. 1. (+. 0. 1.))",None),
+]
+
+programs = [
                 ("(+. 1. 1.)",None),
                 ("(*. (+. 1. 1.) pi)",None),
                 ("(+. (*. (+. 1. 1.) pi) 1.)",None),
@@ -28,13 +33,6 @@ programs = [
                 ("(+. (*. (+. 1. 1.) pi) (*. (+. 1. 1.) pi))",None),
                 ("(+. (*. (+. 1. 1.) pi) (*. (+. 1. 1.) pi))",None),
             ] 
-
-programs = [
-    ("(+. 1. 1.)",None),
-    ("(+. 1. (+. 0. 1.))",None),
-]
-
-
 
 programs = [(Program.parse(p),t) for p,t in programs ]
 
@@ -87,19 +85,17 @@ print(new_name,type(new_name))
 
 print(Primitive.GLOBALS)
 
-Primitive(str(new_name), treal, 3.14)
 
-print(Primitive.GLOBALS)
-for bind in Primitive.GLOBALS:
-    funct =  Primitive.GLOBALS[bind]
-    print("function name: {} function type: {}".format(funct,funct.tp))
+Primitive("I", treal, new_name)
+print(new_name)
 
 
-e = Program.parse("(#(lambda (?? (+ 1 $0))) (lambda (?? (+ 1 $0))) (lambda (?? (+ 1 $0))) - * (+ +))")
-print(e)
-
-
-print(programs[0][0].runWithArguments([]))
 
 e = Program.parse("(#(lambda (* (+ 1 $0) 4)))")
+print(e)
 print(e.runWithArguments([3]))
+
+e = Program.parseHumanReadable("(/. 1. 1.)")
+print(e)
+print(e.f,e.x)
+print(e.runWithArguments([]))
