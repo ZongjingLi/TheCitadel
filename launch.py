@@ -5,12 +5,19 @@ Created on Mon Mar 14 10:03:22 2022
 @author: 
 """
 import eel
-from citadel.interface import *
+from citadel import *
+from config import *
 
 import pygame
 file = "citadel/web/src/KFT.mp3"
 pygame.mixer.init()
 music = pygame.mixer.music.load(file)
+
+from icc.reflection.domains.arithmetics import *
+IceCrownCitadel = TheCitadel(config)
+e = IceCrownCitadel.solution_abstraction()
+
+
 
 print("Start the Citadel...")
 
