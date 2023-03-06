@@ -14,12 +14,25 @@ parser.add_argument("--concept_dim",default = 100)
 parser.add_argument("--arity",default = 3)
 
 # [Language] add the config of the language encoder
-parser.add_argument("--corpus_path",default = "citadel/web/assets/corpus.txt")
-parser.add_argument("--num_words",default = 1e6)
-parser.add_argument("--word_dim",default = 132)
+parser.add_argument("--corpus_path", default = "citadel/web/assets/corpus.txt")
+parser.add_argument("--num_words", default = 1000000)
+parser.add_argument("--word_dim", default = 132)
+parser.add_argument("--semantics_dim", default = 256)
 
 # [Primitive] add the primitive concept embedding structure
-parser.add_argument("--num_primitives",default = 1e6)
-parser.add_argument("--primitive_dim",default = 64)
+parser.add_argument("--num_primitives", default = 1000000)
+parser.add_argument("--primitive_dim", default = 64)
 
 config = parser.parse_args(args = [])
+
+
+if __name__ == "__main__":
+    from citadel import *
+    ice_citadel = TheCitadel(config)
+
+    outputs = ice_citadel.language_encoder(["what is the sum of 1 and 2.","find the sum of 1 and 2."])
+    print("past the test for the citadel language encoder.")
+
+    print("pass the test for the citadel abstractions.")
+    import sng_parser
+    graph = sng_parser.parse('A woman is playing the piano in the room.')

@@ -7,6 +7,7 @@ import numpy as np
 import time
 
 from .programRecognition import *
+from .languageEncoder import *
 from icc.reflection import *
 import gc
 
@@ -18,7 +19,7 @@ class TheCitadel(nn.Module):
         super().__init__()
         self.config = config
         self.concept_dim = config.concept_dim
-        self.language_encoder = None
+        self.language_encoder = LanguageModel(config)
         self.program_search = NeuroHeurisicSearch(config)
         
         # Primitive Token Embeddings
@@ -27,6 +28,9 @@ class TheCitadel(nn.Module):
     def updatePrimitives(self):
         for program in Primitive.GLOBALS:
             pass
+
+    def encode_inputs(self):
+        return {}
 
     def solution_abstraction(self, programs = None):
         if programs == None:
