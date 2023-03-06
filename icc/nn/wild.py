@@ -3,6 +3,8 @@ import torch.nn as nn
 
 import torch.nn.functional as F
 
+import scipy 
+
 class ParticleFilter(nn.Module):
     def __init__(self, world_size = 50):
         super().__init__()

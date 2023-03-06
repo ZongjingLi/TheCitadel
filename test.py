@@ -11,3 +11,5 @@ print(pi.evalf())
 x,y = symbols("x y")
 
 print(diff(cos(x),x))
+
+pf = ParticleFilter(40)
