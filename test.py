@@ -13,3 +13,10 @@ x,y = symbols("x y")
 print(diff(cos(x),x))
 
 pf = ParticleFilter(40)
+
+import matplotlib.pyplot as plt
+
+ims = text2img(["Hello there!"],[480,360])
+
+plt.imshow(ims)
+plt.show()

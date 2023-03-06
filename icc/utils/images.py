@@ -7,7 +7,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 def get_font():
-    font_library = "/usr/share/fonts/truetype"
+    
+    font_library = "/System/Library/Fonts"
     if os.path.exists(os.path.join(font_library, "ttf-bitstream-vera", "VeraMono.ttf")):
         return os.path.join(font_library, "ttf-bitstream-vera", "VeraMono.ttf")
     for font_folder in glob.glob(os.path.join(font_library, "*")):
