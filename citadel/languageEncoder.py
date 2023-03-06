@@ -26,7 +26,7 @@ class VectorConstructor(nn.Module):
             self.token_to_id = build_vocab(corpus)
         self.id_to_token = reverse_diction(self.token_to_id)
 
-        self.word_vectors = nn.Embedding(config.max_word_num,config.word_dim)
+        self.word_vectors = nn.Embedding(config.num_words,config.word_dim)
 
     def forward(self,sentence):
         return sentence

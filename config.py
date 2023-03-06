@@ -14,6 +14,7 @@ parser.add_argument("--concept_dim",default = 100)
 parser.add_argument("--arity",default = 3)
 
 # [Language] add the config of the language encoder
+parser.add_argument("--corpus_path",default = "citadel/web/assets/corpus.txt")
 parser.add_argument("--num_words",default = 1e6)
 parser.add_argument("--word_dim",default = 132)
 
