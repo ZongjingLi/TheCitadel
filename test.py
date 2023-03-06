@@ -21,3 +21,5 @@ ims = read_image("citadel/web/src/arthas.jpg")
 from icc.reflection.domains.arithmetics import *
 
 program = Program.parse("(+ 1 1)")
+
+print(Primitive.GLOBALS)

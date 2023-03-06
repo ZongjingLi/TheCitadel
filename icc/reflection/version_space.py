@@ -958,7 +958,7 @@ def induceGrammar_Beta(g0, frontiers, _=None,
                        structurePenalty=1.,
                        CPUs=1):
     """grammar induction using only version spaces"""
-    from runyanar.fragmentUtilities import primitiveSize
+    from .fragmentUtilities import primitiveSize
     import gc
     
     originalFrontiers = frontiers
