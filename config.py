@@ -34,5 +34,4 @@ if __name__ == "__main__":
     print("past the test for the citadel language encoder.")
 
     print("pass the test for the citadel abstractions.")
-    import sng_parser
-    graph = sng_parser.parse('A woman is playing the piano in the room.')
+   

@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 import torch
 from PIL import Image, ImageDraw, ImageFont
 
+import spacy
+
+#import spacy 
+#spacy.load('/Users/melkor/miniforge3/envs/Morgoth/lib/python3.8/site-packages/spacy/en_core_web_sm')
 
 def get_font():
     
