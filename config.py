@@ -35,3 +35,47 @@ if __name__ == "__main__":
 
     print("pass the test for the citadel abstractions.")
    
+
+def primes(n):
+    P = []
+    f = []
+    for i in range(n+1):
+        if i > 2 and i%2 == 0:
+            f.append(1)
+        else:
+            f.append(0)
+    i = 3
+    counter = 0
+    while i*i <= n:
+        if f[i] == 0:
+            j = i*i
+            while j <= n:
+                f[j] = 1
+                j += i+i
+        i += 2
+        counter += 1
+    print(counter)
+ 
+    P.append(2)
+    for x in range(3,n+1,2):
+        if f[x] == 0:
+            P.append(x)
+ 
+    return P
+ 
+n = 115   #100以内的素数
+P = primes(n)
+print(P)
+ 
+#    Ipython 2.7实现
+import numpy as np
+a = np.arange(1,115)
+n_max = int(np.sqrt(len(a)))
+is_prime = np.ones(len(a),dtype=bool)
+is_prime[0] = False
+for i in range(2,n_max) :
+    if i in a[is_prime]:
+        is_prime[(i**2-1)::i] = False
+         
+print (a[is_prime])
+
