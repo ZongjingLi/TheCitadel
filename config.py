@@ -28,31 +28,10 @@ config = parser.parse_args(args = [])
 
 if __name__ == "__main__":
     from citadel import *
-    ice_citadel = TheCitadel(config)
+    ice_citadel = TheIceCitadel(config)
 
     outputs = ice_citadel.language_encoder(["what is the sum of 1 and 2.","find the sum of 1 and 2."])
     print("past the test for the citadel language encoder.")
 
     print("pass the test for the citadel abstractions.")
    
-def gcd(a, b):
- 
-    if (a == 0):
-        return b
-    return gcd(b % a, a)
- 
-# A simple method to evaluate
-# Euler Totient Function
-def phi(n):
- 
-    result = 1
-    for i in range(2, n):
-        if (gcd(i, n) == 1):
-            result+=1
-    return result
- 
-# Driver Code
-print(phi(24))
-            
-# This code is contributed
-# by Smitha
