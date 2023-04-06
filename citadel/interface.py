@@ -13,7 +13,7 @@ from citadel import *
 import json
 import time
 
-citadel_model = TheCitadel(config)
+citadel_model = TheCitadelInterface(config)
 if config.load_ckpt:citadel_model = torch.load(config.ckpt_path)
 else:print("failed to load the citadel")
 

@@ -6,12 +6,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 
-from .programRecognition import *
-from .languageEncoder import *
+from .models.language.languageEncoder import *
 from icc.reflection import *
 import gc
 
-class TheCitadel(nn.Module):
+class TheCitadelInterface(nn.Module):
     
     COUNT = 0
 
@@ -20,7 +19,7 @@ class TheCitadel(nn.Module):
         self.config = config
         self.concept_dim = config.concept_dim
         self.language_encoder = LanguageModel(config)
-        self.program_search = NeuroHeurisicSearch(config)
+        self.program_search = None
         
         # Primitive Token Embeddings
         self.primitive_embeddings = nn.Embedding(config.num_primitives,config.primitive_dim)
