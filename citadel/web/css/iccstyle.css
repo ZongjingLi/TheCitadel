@@ -133,10 +133,15 @@ article {
 }
 
 .framework {
-    margin-left: 13%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: auto;
     margin-bottom: 15px;
-    
+}
+
+.ppt-page{
+    margin-left: 3%;
+    margin-right: auto;
+    margin-bottom: 15px;
 }
 
 .img-text-container {
