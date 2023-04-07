@@ -522,3 +522,13 @@ body{
         cursor:pointer;
   
     }
+
+.grid {
+        display: grid;
+    
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 2fr 1fr 1fr ;
+    
+        justify-content: center;
+}
