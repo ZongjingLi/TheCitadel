@@ -179,9 +179,8 @@ article {
 }
 
 a{
-    color:#2D9CDB;
-    font-family:'open-sans',sans-serif;
-    font-weight:700;
+    color:#ffffff;
+    text-decoration:none
 }
 
 a:hover{
