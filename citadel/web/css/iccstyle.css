@@ -8,6 +8,10 @@ body {
 
 }
 
+.send {
+    padding-left: 2%;
+}
+
 .right-side {
     margin-left: 5%;
 }
@@ -248,13 +252,15 @@ blockquote{
 button{
     border:none;
     cursor:pointer;
-    padding-left:0;
+    padding-left:10%;
     padding-right:0;
+    appearance: none;
+    background-color: inherit;
     transform:scale(1);
 }
 
 button:hover{
-    transform:scale(1.2);
+    opacity: 0.5;
 }
 
 button:focus{
@@ -413,6 +419,7 @@ textarea{
     margin-bottom:1px;
     padding:3px;
     resize:none;
+    width:90%;
 
 }
 textarea::placeholder{
