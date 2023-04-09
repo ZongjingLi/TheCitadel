@@ -17,8 +17,8 @@ music = pygame.mixer.music.load(file)
 
 # start to load the Ice Crown Citadel
 from icc.reflection.domains.arithmetics import *
-IceCrownCitadel = TheCitadel(config)
-e = IceCrownCitadel.solution_abstraction()
+#IceCrownCitadel = TheCitadel(config)
+#e = IceCrownCitadel.solution_abstraction()
 
 
 print("Start the Citadel...")
@@ -28,5 +28,5 @@ eel.init('/Users/melkor/Documents/GitHub/TheCitadel')
 pygame.mixer.music.play(loops=3)
 
 # start the eel web page.
-eel.start('citadel/web/index.html')
+eel.start('citadel/web/icecrown_citadel.html')
 

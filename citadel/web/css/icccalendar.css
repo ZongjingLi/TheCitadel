@@ -1,18 +1,18 @@
 :root {
-    --numDays: 5;
-    --numHours: 10;
+    --numDays: 1;
+    --numHours: 11;
     --timeHeight: 60px;
-    --calBgColor: #fff1f8;
-    --eventBorderColor: #f2d3d8;
-    --eventColor1: #ffd6d1;
-    --eventColor2: #fafaa3;
+    --calBgColor: #ffffff;
+    --eventBorderColor: #71cbdf;
+    --eventColor1: #bee5f3;
+    --eventColor2: #bee9ff;
     --eventColor3: #e2f8ff;
     --eventColor4: #d1ffe6;
   }
   
   .calendar {
     display: grid;
-    gap: 10px;
+    gap: 8px;
     grid-template-columns: auto 1fr;
     margin: 2rem;
   }
