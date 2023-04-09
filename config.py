@@ -5,7 +5,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--name",default = "The Citadel")
 parser.add_argument("--load_ckpt",default = False)
 parser.add_argument("--ckpt_path",default = "Citadel/checkpoints/icc.ckpt")
-parser.add_argument("--reserved_path",default = "Citadel/reserved.json")
+parser.add_argument("--reserved_path",default = "assets/reserved.json")
 
 # [Neuro-Symbolic] add the neuro symbolic config (not implemented yet)
 parser.add_argument("--concept_dim",default = 100)

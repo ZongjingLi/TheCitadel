@@ -2,8 +2,9 @@
     <head>
         <title>IceCrown Citadel</title>
         <link rel="stylesheet" href="css/iccstyle.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/icccalendar.css">
+        <script src="js/icc.js"></script>
+        <script type="text/javascript" src="/eel.js"></script>
     </head>
     <body class="layout">
         <header>
@@ -138,7 +139,7 @@
                 <h1>Interactive</h1>
                 <div class="input-area">
                     <form>
-                        <textarea rows="3" id="interactive-inputs"></textarea><button class="send"><img src="assets/send-paper.png" width="24px" height="24px"></button>
+                        <textarea placeholder="content" id="interactive-inputs"></textarea><button class="send" onclick="iccrespond()"><img src="assets/send-paper.png" width="24px" height="24px"></button>
                     </form>
                 </div>
                 <div class="output-area" id="interactive-outputs">
@@ -187,8 +188,5 @@
         </main>
         <footer>Made by ZongingLi</footer>
     </body>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="js/icc.js"></script>
 
 </html>

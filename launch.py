@@ -18,8 +18,8 @@ music = pygame.mixer.music.load(file)
 # start to load the Ice Crown Citadel
 from icc.reflection.domains.arithmetics import *
 CitadelInterface = TheCitadelInterface(config)
-#e = CitadelInterface.solution_abstraction()
 
+#e = CitadelInterface.solution_abstraction()
 
 print("Start the Citadel...")
 
