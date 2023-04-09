@@ -1,6 +1,3 @@
-import numpy as np
-import matplotlib.pyplot as plt
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -21,19 +18,9 @@ else:print("failed to load the citadel")
 with open(config.reserved_path) as file:
     reserved_keywords = json.load(file)
 
-@eel.expose
-def test_str():
-    x = torch.randn([1,2])
-    res = str(x.detach().numpy()[0][0])
-    return "ACTUAL ANSWER: " + str(res)
-
-@eel.expose
-def test_network(input_sent):
-    print(input_sent)
-    return "this is the output"
 
 @eel.expose 
-def get_respond(text):
+def get_icc_respond(text):
     time.sleep(0.5)
     if text in reserved_keywords:
         return reserved_keywords[text]
