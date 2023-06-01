@@ -1,0 +1,47 @@
+body {
+    display: grid;
+    grid-template-columns: 
+        75fr 25fr;
+}
+main {
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+
+}
+
+main .top-bar {
+    background-color: brown;
+    display: grid;
+    grid-template-columns: 
+        20fr 80fr;
+    align-items: center;
+}
+
+/* [Deck Collection] adjust the content in the Deck Collection Part */
+
+.deck-collection {
+    align-items: center;
+    background-color:rgb(118, 1, 196);
+}
+
+.card-collection {
+    display: grid;
+    grid-template-columns: 
+        20fr 80fr;
+}
+
+.card-collection .left-scroll {
+    background-color: blue;
+}
+
+.card-collection .card-collection-area {
+    display: grid;
+    grid-template-rows: 10fr 90fr;
+    background-color:aqua;
+}
+
+.card-collection .card-collection-area .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
