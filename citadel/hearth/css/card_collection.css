@@ -10,11 +10,25 @@ main {
 }
 
 main .top-bar {
-    background-color: brown;
+    background-color: rgb(80, 80, 80);
     display: grid;
     grid-template-columns: 
         20fr 80fr;
     align-items: center;
+}
+
+main .top-bar .logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+main .top-bar .top-navigators {
+    margin-right: auto;
+    /*margin-top: auto;*/
+    columns: 9;
+}
+
+.rune:hover {
+    transform:scale(1.04);
 }
 
 /* [Deck Collection] adjust the content in the Deck Collection Part */
@@ -44,4 +58,20 @@ main .top-bar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+}
+
+.deck-collection {
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;ww
+}
+
+.deck-bar {
+    margin-bottom:auto;
+    margin-right: auto;
+    margin-left: auto;
 }
