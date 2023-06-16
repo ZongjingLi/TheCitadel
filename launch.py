@@ -26,7 +26,7 @@ print("Start the Citadel...")
 # play the music of the ice crown citadel
 
 pygame.mixer.music.play(loops=3)
-eel.init('/Users/melkor/Documents/GitHub/TheCitadel')
+#eel.init('/Users/melkor/Documents/GitHub/TheCitadel')
 # start the eel web page.
-eel.start('citadel/web/icecrown_citadel.html')
+#eel.start('citadel/web/icecrown_citadel.html')
 
