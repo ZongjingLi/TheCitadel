@@ -4,29 +4,35 @@ Created on Mon Mar 14 10:03:22 2022
 
 @author: 
 """
-import eel
 from citadel import *
 from config import *
-
 import pygame
-
 # start to play the intro music of the Citadel
 file = "citadel/web/src/KFT.mp3"
 pygame.mixer.init()
 music = pygame.mixer.music.load(file)
 
+from tornado.web import RequestHandler,Application
+from tornado.ioloop import IOLoop
+from tornado.httpserver import HTTPServer
+import tornado.options
+
 # start to load the Ice Crown Citadel
-from icc.reflection.domains.arithmetics import *
-CitadelInterface = TheCitadelInterface(config)
+tornado.options.define('port',default=8000,type=int,help="this is the port >for application")
 
-#e = CitadelInterface.solution_abstraction()
 
-print("Start the Citadel...")
+class IndexHandler(RequestHandler):
+   def get(self):
+       self.write('我们既然改变不了规则，那就做到最好')
 
-# play the music of the ice crown citadel
+if __name__ == '__main__':
+   app = Application([(r'/',IndexHandler)])
+   tornado.options.parse_command_line()
 
-pygame.mixer.music.play(loops=3)
-#eel.init('/Users/melkor/Documents/GitHub/TheCitadel')
-# start the eel web page.
-#eel.start('citadel/web/icecrown_citadel.html')
+   pygame.mixer.music.play(loops = 3)
 
+   http_server = HTTPServer(app)
+   http_server.bind(tornado.options.options.port)
+   http_server.start(1)
+   #启动IOLoop轮循监听
+   IOLoop.current().start()
