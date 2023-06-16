@@ -23,7 +23,7 @@ tornado.options.define('port',default=8000,type=int,help="this is the port >for 
 
 class IndexHandler(RequestHandler):
    def get(self):
-       self.write('我们既然改变不了规则，那就做到最好')
+       self.write('Ice Crown Citadel.')
 
 if __name__ == '__main__':
    app = Application([(r'/',IndexHandler)])
