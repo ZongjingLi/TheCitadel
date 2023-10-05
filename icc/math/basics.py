@@ -17,4 +17,5 @@ class Expression(nn.Module):
 gui = ti.GUI("math_visualize")
 
 while gui.running:
+    gui.arrow((0,0.3),(.1,.2),radius = 1)
     gui.show()
